@@ -1,0 +1,103 @@
+\section{29 de septiembre de 2020}
+
+\begin{exercise}
+¿Masa de un resorte?
+\begin{align}
+    \mi{r(t)=\frac{1}{\sqrt{2}}\vfd{\cos t}{\sin t}{t}}& 0\leq t \leq 6\pi\\ 
+    \mi{||r'(t)||=\frac{1}{\sqrt{2}}\sqrt{(-sent)^2+(cost)^2 +(1)^2}=1}\\
+    \mi{\frac{1}{\sqrt{2}}\sqrt{2}= \frac{\sqrt{2}}{\sqrt{2}}}\\
+    \mi{\ie{c}{}{(1+z)}{S}=\ie{0}{6\pi}{(1+\frac{t}{\sqrt{2}})(1)}{t}}\\
+    \mi{[t +\frac{t^2}{2\sqrt{2}}]_0^{6\pi}= 6\pi(1+\frac{3\pi}{\sqrt{2}})=144.47}
+\end{align}
+\end{exercise}
+
+\begin{exercise}
+
+\begin{align}
+    \mi{\ie{c}{}{f(x,y)}{x}=\ie{a}{b}{f(x(t),y(t))x'(t)}{t}}\\
+    \mi{\ie{c}{}{xy^2}{x}}& x=4cost,y=4sent & 0\leq t\leq \frac{\pi}{2}&\\
+    \mi{\ie{c}{}{xy^2}{x}=\ie{0}{\pi/2}{(4cost)(16\sin^2 t)(-4sent)}{t}}\\
+    \mi{-256\ie{0}{\pi/2}{\sin^2t*cost}{t}=-256[\frac{\sin^4 t}{4}]_0^{\pi/2}=-64}
+\end{align}
+\end{exercise}
+
+\begin{exercise}
+\begin{align}
+    \mi{\ie{c}{}{f(x,y)}{x}=\ie{a}{b}{f(x(t),y(t))y'(t)}{t}}\\
+    \mi{\ie{c}{}{xy^2}{x} & x=4\cos t,y=4\sin t & 0\leq t\leq \frac{\pi}{2}}\\
+    \mi{\ie{c}{}{xy^2}{x}=\ie{0}{\pi/2}{(4cost)(16\sin^2 t)(4cost)}{t}}\\
+    \mi{256\ie{0}{\pi/2}{\sin^2t*cost}{t}=256\ie{0}{\pi/2}{\frac{\sin^2 2t}{4}}{t}\\
+    \mi{=64\ie{0}{\pi/2}{\frac{1}{2}(1-cos(4t)}{t}}}\\
+    \mi{=16\pi}
+\end{align}
+\end{exercise}
+
+\begin{exercise}
+\begin{align}
+    \mi{\ie{c}{}{f(x,y)}{x}=\ie{a}{b}{f(x(t),y(t))||f||}{t}}\\
+    \mi{\ie{c}{}{xy^2}{x} & x=4\cos t,y=4\sin t & 0\leq t\leq \frac{\pi}{2}}\\
+    \mi{\ie{c}{}{xy^2}{x}=\ie{0}{\pi/2}{(4cost)(16\sin^2 t)(\sqrt{16(\cos^2 t+\sin^2 t)})}{t}}\\
+    \mi{256/3}
+\end{align}
+\end{exercise}
+
+\begin{exercise}
+\begin{align}
+    \mi{\ie{c}{}{xy}{x}+x^2 dy & c:y=x^3 & -1\leq x \leq 2}\\
+    \mi{\ie{-1}{2}{x(x^3)}{x}+x^2 (3x^2 dx)}& dy=3x^2 dx\\
+    \mi{\ie{-1}{2}{4x^4}{x}=\frac{4x^5}{5}|_{-1}^2=\frac{132}{5}}
+\end{align}
+\end{exercise}
+
+\begin{exercise}
+
+\begin{align}
+    \mi{\ie{c}{}{y^2}{x}-x^2dy}
+    \intertext{$\int_c =\int_{c_1} + \int_{c_2} + \int_{c_3}$}
+    \mi{\ie{c_1}{}{y^2}{x}-x^2dy& y=0,dy=0dx}\\
+    \mi{= \ie{0}{2}{(0)^2}{x}-x^2 (0dx) =0}\\
+    \mi{\ie{c_2}{}{y^2}{x}-x^2 dy = \ie{0}{4}{y^2 (0}{y)-4dy}} & x=2,dx=0dy\\
+    \mi{[-4y]_0^4 =-16}\\
+    \mi{\ie{c_3}{}{y^2}{x}-x^2 dy = \ie{2}{0}{x^4}{x}-x^2(2xdx)}\\
+    \mi{\ie{2}{0}{(x^4 -2x^3)}{x}=[(\frac{x^5}{5}-\frac{x^4}{2})]_2^0 =8/5}\\
+    \mi{\ie{c}{}{y^2}{x}-x^2dy= 0+(-16)+8/5 =-72/5}
+\end{align}
+\end{exercise}
+
+\subsection{Definición de trabajo}
+\begin{definition}
+\begin{align}
+    \mi{W=\ie{a}{b}{f(x)}{x}}\\
+    \mi{\text{Fuerza constante. }} & F\mapsto W=F\cdot D & D=\Vec{PQ}\\
+    \mi{\ie{c}{}{F\cdot}{r}=\ie{a}{b}{F(r(t))\cdot r'(t)}{t}}
+\end{align}
+\end{definition}
+
+\ej{
+\mi{F(x,y,z)=\vfd{-\frac{1}{2}x}{-\frac{1}{2}}{+\frac{1}{4}}}\\
+\mi{r(t)=\vf{cost}{+sent}{+t}}\\
+\mi{(1,0,0)\mapsto (-1,0,3\pi)}&x=cost,y=sent,z=t\\
+\mi{F(x(t),y(t),z(t))= \vfd{-\frac{cost}{2}}{-\frac{sent}{2}}{\frac{1}{4}}}\\
+\mi{r'(t)=\vf{-sent}{+cost}{+1}}\\
+\mi{\ie{c}{}{F\cdot}{r}=\ie{0}{3\pi}{(\vfd{-\frac{cost}{2}}{-\frac{sent}{+2}}{+\frac{1}{4}})\cdot(\vf{-sent}{+cost}{+1})}{t}}\\
+\mi{\ie{0}{3\pi}{(\frac{costsint}{2})-\frac{costsent}{2}+\frac{1}{4}}{t}}\\
+\mi{\ie{0}{3\pi}{\frac{1}{4}}{t}=[\frac{1}{4}t]_0^{3\pi}=\frac{3\pi}{4}}
+}
+
+\ej{
+\intertext{$F(x,y)=\vfd{y}{+x}$ a lo largo de $y=ln(x)$ desde (1,0) hasta (e,1). ¿Cuál es el w?}
+\mi{w=\ie{c}{}{F\cdot}{r}}&r(t)=\vfd{x}{+lnx}\\
+\intertext{Parametrización de x}
+\mi{F= \vfd{lnx}{+x}}\\
+\mi{dr=(\vfd{1}{+\frac{1}{x}})dx}\\
+\mi{w= \ie{1}{e}{lnx}{x}+\ie{1}{e}{1}{dx}}
+\mi{xln(x) -\ie{1}{e}{1}{x}+\ie{1}{e}{1}{x}=[xln(x)]_1^e =e}
+}
+
+\ej{
+\intertext{¿w? $F(x,y) =\vfd{a}{b}$ alrededor de $x^2+y^2=9\longleftarrow r=\vfd{3\cos t}{+3\sin t}$ en donde $0\leq t \leq 2\pi$}
+\intertext{$dr= \vfd{-3\sin t}{+\cos t}$}
+\mi{w=\ie{0}{2\pi}{(-3asent+3bcost)}{t}=[3acost +3bsent]_0^{2\pi}=0}
+}
+\ej{
+}

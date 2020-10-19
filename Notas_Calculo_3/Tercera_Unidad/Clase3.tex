@@ -1,0 +1,120 @@
+\section{5 de octubre de 2020}
+
+\dn{
+\text{Campo vectorial conservativo}\\
+\intertext{$F$ si, existe una función f tal que $\nabla f = F$ .$f\mapsto$ función de potencial para $F$.}
+}
+
+\ej{
+\mi{F(x,y)=\vfd{y}{+x}}& \nabla f=F\\
+\mi{\nabla f =\vfd{\derivada{f}{x}}{+\derivada{f}{y}}= \vfd{y}{+x}}&\text{F es conservativo}\\
+\mi{f(x,y)=xy}
+}
+
+\ej {
+\mi{F(x,y)=\vfd{cosx}{+(a+seny)}}\\
+\mi{f(x,y)=senx+y+cosy}& \nabla f=F\\
+\mi{\derivada{f}{x}=cosx& \derivada{d}{y}=(1-seny)}
+}
+
+\ej{
+\mi{F(x,y,z)=\vf{y^2 z^3}{2xyz^3}{3xy^2 z^2}}\\
+\mi{f(x,y,z)=xy^2 z^3}&\nabla f=F\\
+\mi{\derivada{f}{x}= y^2 z^3 }
+}
+
+\begin{theorem}
+\begin{align}
+    \intertext{Teorema fundamental de las integrales de línea}
+    \mi{\ie{a}{b}{F'(x)}{x}= F(b)-F(a)}& \text{ antiderivada}\\
+    \intertext{Función vectorial $r(t)$ en donde $a\leq t \leq b$ tal que $f$ es derivable $\nabla f$ es continuo}\\
+    \mi{\ie{c}{}{\nabla f\cdot}{r}=f(r(b)-f(r(a))}\\
+\end{align}
+\end{theorem}
+
+\ej{
+\mi{\vf{yz}{xz}{xy}}& \text{donde: } f(x,y,z)=xyz\\
+\intertext{A(-1,3,) hasta el punto B(1,6,-4)}\\
+\mi{w= \ie{c}{}{F\cdot}{r}= \ie{A}{B}{\nabla f\cdot}{r}=f(B)-f(A)}\\
+\mi{xyz|_(1,6,-4)- xyz|_(-1,3,9)}\\
+\mi{(1)(-4)(6)-(-1)(3)(9)=3}
+}
+
+\begin{theorem}
+\begin{align}
+    \intertext{Teorema $\ie{c}{}{F\cdot}{r}$ es independiente de su trayectoria en $D$ ssi $\ie{c}{}{F\cdot}{r}$ es igual para toda trayectoria cerrada.}
+\end{align}
+\end{theorem}
+
+\ej{
+\mi{F(x,y)=\vfd{P(x,y)}{+Q(x,y)}}\\
+\mi{\derivada{P}{y}=\derivada{Q}{x}}
+}
+
+\ej{
+\mi{F(x,y)= \vfd{-ye^{-xy}}{-xe^{-xy}}}&P=-ye^{-xy}&Q=-xe^{-xu¡y}\\
+\mi{\derivada{P}{y}=xye^{-xy}-e^{-xy}}\\
+\mi{\derivada{Q}{x}=xye^{-xy}-e^{-xy}}\\
+\mi{\derivada{P}{y}=\derivada{Q}{x}}\\
+\text{F es conservativo.}
+}
+
+\ej{
+\mi{F(x,y)=\vfd{(x^2 -2y^3)}{(x+5y)}}\\
+\mi{P=x^2 -2y^3 & Q=x+5y}\\
+\mi{\derivada{P}{y}=-6y^2 \neq \derivada{Q}{x}=1}
+}
+\dn{
+\mi{F=\vf{P(x,y,z)}{+Q(x,y,z)}{+R(x,y,z)}}\\
+\mi{\derivada{P}{y}=\derivada{Q}{x}&\derivada{P}{z}=\derivada{R}{x} &\derivada{Q}{z}=\derivada{R}{y}}\\
+}
+
+\ej{
+\mi{F=\vf{(e^x cosy +yz)}{+(xz-e^x seny)}{(xy+z)}}\\
+\mi{\derivada{P}{y}=\derivada{Q}{x}=-e^x seny+z}\\
+\mi{\derivada{P}{z}=\derivada{R}{x}=y}\\
+\mi{\derivada{Q}{z}=\derivada{R}{y}=x}\\
+\text{F sí es conservativo}.\\
+\mi{\derivada{f}{x}=(e^x cosy +yz) &\derivada{f}{y}=xz-e^x seny & \derivada{f}{z}=xy+z }\\
+\mi{f(x,y,z) =e^x cosy +xyz +g(y,z)}\\
+\intertext{$\derivada{g}{y}=xz-xz-e^x seny +e^x seny=0$}
+\mi{\derivada{f}{y}=-e^x seny +xz+\derivada{g}{y}= xz-e^x seny}\\
+\mi{f(x,y,z)=e^x cosy+xyz +h(z)}\\
+\mi{\derivada{f}{z}=xy+\derivada{h}{z}=xy+z}
+\mi{\derivada{h}{z}=z}\\
+\mi{h(z)=\frac{z^2}{2}+c}\\
+\mi{f(x,y,z)=e^x cosy +xyz +\frac{z^2}{2}+c}
+}
+
+\ej{
+\mi{F=\vf{-\frac{y}{x^2 +y^2}}{+\frac{x}{x^2 +y^2}}{0}}\\
+\mi{\derivada{P}{y}=\derivada{Q}{x}=\frac{-x^2+y^2}{(x^2+y^2)^2}}\\
+\mi{\derivada{P}{z}=\derivada{R}{x}=0}\\
+\mi{\derivada{Q}{z}=\derivada{R}{y}=0}\\
+\text{F no es conservativo}
+}
+
+\ej{
+\mi{r(t)=\vfd{cost}{+sent}}& 0\leq t \leq 2\pi \\
+\mi{F=\vfd{-\frac{sent}{(\sin^2)+(\cos^2 t)}}{+\frac{\cos t}{(\sin^2)+(\cos^2 t)}}}\\
+\mi{= \vfd{-sent}{+cost}}\\
+\mi{dr=\vfd{(-sent}{+cost}}\\
+\mi{\ie{c}{}{F\cdot}{dr}=\ie{c}{}{F\cdot\frac{dr}{dt}}{t}=\ie{0}{2\pi}{(sen^2 t +cos^2 t)}{t}=2\pi}
+}
+\ej{
+\mi{\ie{c}{}{(y+yz)}{x}+(x+3z^2+xz)dy+(9yz^2 +xy-1)dz)}\\
+\intertext{Demostrar que es independiente de la trayectoria (1,1,1) y (2,1,4)}
+\mi{\derivada{P}{y}=\derivada{Q}{z}=1+z}\\
+\mi{\derivada{P}{z}=\derivada{R}{x}=y}\\
+\mi{\derivada{Q}{z}=\derivada{R}{y}=9z^2 +x}\\
+\mi{\ie{(1,1,1)}{(2,1,4)}{F\cdot}{r}}\\
+\mi{f=xy+xyz+g(y,z)}\\
+\mi{\derivada{f}{y}=x+xz+\derivada{g}{y}= x+3z^2 +xz}& \derivada{g}{y}=3z^2\\
+\mi{g(y}=3yz^3 +h(z)\\
+\mi{f=xy+xyz+3yz^3 +h(z)}\\
+\mi{\derivada{f}{z}=xy+9yz^2+\derivada{h}{z}=9yz^2 +xy-1}& h(z)=-z+c\\
+\mi{f=xy+xyz+3yz^3+(-z)}\\
+\mi{\ie{(1,1,1)}{(2,1,3)}{F\cdot}{r}=[xy+xyz+3yz^3 -z]_{(1,1,1)}^{(2,1,4)}=198-40=194}
+}
+
+

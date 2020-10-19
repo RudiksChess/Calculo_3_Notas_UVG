@@ -60,7 +60,7 @@
 \thispagestyle{empty} % Suppress headers and footers on the title page
 \begin{tikzpicture}[remember picture,overlay]
 \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{Pictures/background.pdf}};
-\draw (current page.center) node [fill=blue!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Ecuaciones Diferenciales 1\\[15pt] % Book title
+\draw (current page.center) node [fill=blue!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Cálculo 3\\[15pt] % Book title
 {\Large Notas de clases}\\[20pt] % Subtitle
 {\huge Rudik Roberto Rompich}}}; % Author name
 \end{tikzpicture}
@@ -105,7 +105,7 @@
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{Transformada de Laplace}
+\part{Contenido Parcial 3}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 1
@@ -113,19 +113,14 @@
 
 \chapterimage{Pictures/0001} % Chapter heading image
 
-\chapter{Contenido para el parcial 3}
-\section{14 de octubre de 2020}
+\chapter{Cálculo vectorial}
 
+\input{Tercera_Unidad/Clase1}
+\input{Tercera_Unidad/Clase2}
+\input{Tercera_Unidad/Clase3}
+\input{Tercera_Unidad/Clase4}
+\input{Tercera_Unidad/Clase5}
+\input{Tercera_Unidad/Clase6}
 
-%	INDEX
-%----------------------------------------------------------------------------------------
-
-\cleardoublepage % Make sure the index starts on an odd (right side) page
-\phantomsection
-\setlength{\columnsep}{0.75cm} % Space between the 2 columns of the index
-\addcontentsline{toc}{chapter}{\textcolor{blue}{Index}} % Add an Index heading to the table of contents
-\printindex % Output the index
-
-%----------------------------------------------------------------------------------------
 
 \end{document}

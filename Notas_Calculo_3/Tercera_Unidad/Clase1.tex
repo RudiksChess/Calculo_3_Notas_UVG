@@ -1,0 +1,145 @@
+
+\section{28 de septiembre de 2020}
+\subsection{Cálculo diferencial en varias variables - Funciones vectoriales}
+
+
+\input{ImageTKZ/Image1}
+\begin{definition}
+\begin{align}
+    \mi{x=f(t)&y=g(t)} a\leq t\leq b\\
+    \mi{r(t)=\bv{f(t),g(t)}=f(t)\hat{i}+y(t)\hat{j}}\\
+    \mi{r_o=\bv{x_o,x_o,z_o}&r_1=\bv{x_1,y_1,z_1}}\\
+    \mi{t=(1-t)r_o+tr_1}
+\end{align}
+\end{definition}
+
+\begin{exercise}
+\begin{align}
+    \intertext{¿Función vectorial? Para recta que va $P_o(3,2,-1)$ al punto $P_1(1,4,5)$}
+    \mi{r(t)=(1-t)\bv{3,2,-1}+t\bv{1,4,5}}\\
+    \mi{r(t)=\bv{3-2t,2+2t,-1+6t}}
+\end{align}
+\end{exercise}
+%---
+\begin{align}
+    \mi{\vf{4\cos t}{+t}{+2\sin t}} &\text{c. helicoloides}
+\end{align}
+%---
+
+\begin{align}
+    \mi{\vf{t\cos t}{+t\sin t}{+t}}
+\end{align}
+%---
+\begin{align}
+    \mi{\vf{t^2}{+t^4}{+t^6}}
+    \intertext{$x,y; y=x^3$ y $x,z; z=x^3$}
+\end{align}
+
+\subsection{Campos vectoriales}
+\begin{definition}
+\begin{align}
+    \intertext{Sobre $\mathbf{R}^2$ una función $F$ que asigna a cada punto $(x,y)$ en $D$ (conjunto en $\mathbf{R}^2$) un vector bidimensional.}
+    \mi{F(x,y)=\vfd{P(x,y)}{+Q(x,y)}}\\
+    \mi{\bv{P(x,y),Q(x,y)}}\\
+    \mi{F=P_i+Q_j}
+    \intertext{También es posible expresarlas:}
+    \mi{F(x,y,z)=\vf{P}{+Q}{+R}}
+\end{align}
+\end{definition}
+%---
+\begin{example}
+\begin{align}
+    \mi{F(x,y)=\vfd{-y}{+x}}\\
+    \mi{||F||=C}\\
+    \mi{\sqrt{y^2 +x^2}=C}
+    \mi{x^2 +y^2 = C^2}\\
+    \mi{(1,0)\mapsto\vfd{-(0)}{+(1)}=j}\\
+    \mi{(0,1)\mapsto\vfd{-(1)}{+0}=-i}\\
+    \mi{(1.5,1.5)\mapsto \vfd{-1.5}{+1.5}}
+\end{align}
+\end{example}
+%---- 
+\begin{example}
+\begin{align}
+    \mi{F(x,y)=\vfd{2x}{+y}}\\
+    \mi{||F||=C}\\
+    \mi{\sqrt{(2x)^2 +y^2}=C}\\
+    \mi{4x^2 +y^2 =C^2 }& \text{elipse}\\
+    \mi{(0.5,0)\implies 1i}\\
+    \mi{(0,1)\implies 1j}\\
+    \mi{(0.25,0.25)\implies \vfd{0.5}{+0.25}}\\
+    \mi{(-2,-2)\implies \vfd{-4}{-2}}
+\end{align}
+\end{example}
+
+%---- 
+\begin{example}
+\begin{align}
+    \mi{F(x,y,z)=\vf{1}{-1}{0}}\\
+    \mi{||F||=C}\\
+    \mi{\sqrt{(1)^2 +(1)^2 +(0)^2}=\sqrt{2}}
+\end{align}
+\end{example}
+
+\subsection{Gradiente}
+\begin{definition}
+\begin{align}
+    \mi{f(x,y)=x^2 y+3xy^3}\\
+    \mi{\nabla f(x,y)=\vfd{f_x(x,y)}{+f_y(x,y)})}\\
+    \mi{\nabla f(x,y)=\vfd{(2xy+3y^3)}{+(x^2 +9xy^2)}}\\
+    \intertext{Si $z=f(x,y)$}
+\end{align}
+\end{definition}
+
+\begin{exercise}
+\begin{align}
+    \mi{f(x,y,z)=\sqrt{x^2+y^2+z^2}}\\
+    \mi{\nabla(x,y,z)=\vf{\frac{x}{\sqrt{x^2 +y^2+z^2}}}{\frac{y}{\sqrt{x^2 +y^2+z^2}}}{\frac{z}{\sqrt{x^2 +y^2+z^2}}}}\\
+\end{align}
+\end{exercise}
+
+\begin{exercise}
+\begin{align}
+    \intertext{Una partícula se mueve en un campo de velocidad $V(x,y)= \bv{x^2,x+y^2}$. Si su posición es (2,1) en un tiempo t=3, estime su posición en t=3.01}
+    \mi{t=3\mapsto(2,1)}\\
+    \mi{v(2,1)=\bv{2^2,2+1^2}=\bv{4,3}}\\
+    \mi{t=3\mapsto3.01\implies0.001}\\
+    \mi{0.01V(2,1)=0.01\bv{4,3}=\bv{0.04,0.03}}\\
+    \mi{\text{Posición (2.04,1.03)}}
+\end{align}
+\end{exercise}
+\subsection{Integral de Línea}
+\begin{definition}
+De $f$ a lo largo de $C$. 
+\begin{align}
+    \mi{\int_c f(x,y)ds = \lim_{n\mapsto\infty}}\suma{i=1}{n}{f(x_i^*,y_i^*)\Delta S}\\
+    \intertext{$L=\ie{a}{b}{\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}}{S}$}
+    \mi{\int_c f(x,y)dS=\ie{a}{b}{f(x(t),y(t))*\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}}{S}}
+\end{align}
+\end{definition}
+
+\begin{exercise}
+\begin{align}
+    \mi{\ie{c}{}{(x^2-y+3z)}{S}}\\
+    \intertext{x = t, y = 2t, z = t. En donde $0\leq t \leq$ }
+    \intertext{x'=1,y=2,z=1.}
+    \mi{\sqrt{(1)^2+(2)^2+(1)^2}=\sqrt{6}}\\
+    \mi{\ie{c}{}{(x^2-y+3z)}{S}= \ie{0}{1}{(t^2 -2t +3t)\sqrt{6}}{t}}\\
+    \mi{\sqrt{6}\ie{0}{1}{(t^2 +t)}{t}}\\
+    \mi{\sqrt{6}[\frac{t^3}{3}+\frac{t^2}{2}]_0^1}\\
+    \mi{=\frac{5\sqrt{6}}{6}}
+\end{align}
+\end{exercise}
+
+\begin{exercise}
+\begin{align}
+    \mi{\ie{c}{}{(x+2)}{s}}
+    \intertext{donde C es}
+    \mi{r(t)=\vf{t}{+\frac{4t^{3/2}}{3}}{+\frac{t^2}{2}}}&0\leq t\leq 2\\
+    \mi{||r'(t)||=\sqrt{(1)^2 +(2t^{1/2})^2+(t)^2}=\sqrt{1+4t+t^2}}\\
+    \mi{\ie{c}{}{(x+2)}{s}=\ie{0}{2}{(t+2)\sqrt{1+4t+t^2}}{t}}\\
+    \mi{=15.29}&x=t,y=\frac{4}{t^{2/2}},z=\frac{t^2}{2}
+\end{align}
+\end{exercise}
+
+

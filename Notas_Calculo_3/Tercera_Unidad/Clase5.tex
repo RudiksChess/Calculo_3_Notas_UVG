@@ -1,0 +1,63 @@
+\section{12 de octubre de 2020}
+\subsection{Teorema de Green}
+
+\begin{remark}
+\textbf{Orientación positiva: } Sentida antihorario.\\ 
+\textbf{Orientación negativa: } Sentida horario. 
+\end{remark}
+
+\ej{
+\mi{\oint_{C} (x^2-y^2)dx +(2y-x)dy}\\
+\mi{ c:y=x^2, y=x^3}\\
+\mi{P=x^2-y^2}\\
+\mi{Q=2y-x}\\
+\mi{\derivada{Q}{x}=-1}& \derivada{P}{y}=-2y\\
+\mi{\iint_{D}(-1-(-2y))dA=\int_{0}^{1}\int_{x^3}{x^2}(-1+y)dydx}\\
+\mi{ \ie{0}{1}{[-y+y^2]_{x^3}^{x^2}}{x}=\ie{0}{1}{(-x^6+x^4 +x^3 -x^2)}{x}}\\
+\mi{\frac{-x^7}{7}+\frac{x^5}{5}+\frac{x^4}{4}-\frac{x^3}{4}]_{0}^{1} = \frac{-11}{420}}
+}
+
+\ej{
+\mi{\ieo{C}{}{(x^5+3y)}{x}+(2x-e^{y^2})dy} & c:(x-1)^2 +(y-5)^2 =4\\
+\mi{P=x^5 +3y}& \derivada{P}{y}=3\\
+\mi{Q=2x-e^{y^2}}& \derivada{Q}{x}=2\\
+\mi{\iint_D (2-3)dA= -\iint_D 1dA} &A=\pi r^2 =\pi(2)^2 =4\pi\\
+\mi{-\iint_P 1dA=-4\pi }
+}
+\ej{
+\mi{F=\vfd{(-16y+sen(x^2)}{+(4e^{y}+3x^2)}}\\
+\mi{w=\ieo{c}{}{F\cdot}{r}}\\
+\mi{w=\ieo{c}{}{(-16y +sen(x^2))}{x}+(4e^y +3x^2)dy}\\
+\mi{w=\iint_D (6x+16)dA= \ied{\pi/4}{3\pi/4}{0}{1}(6rcos\theta +16)rdrd\theta}\\
+\mi{= \ied{\pi/4}{3\pi/4}{0}{1}(6r^2cos\theta +16r)drd\theta}\\
+\mi{=\ie{\pi/4}{3\pi/4}{(2r^3 cos\theta +8r^2)]_0^1}{\theta}}\\
+\mi{=\ie{\pi/4}{3\pi/4}{(2cos\theta+8)}{\theta}}
+\mi{4\pi}
+}
+
+\dn{
+\mi{\iint_D (\derivada{Q}{x}-\derivada{P}{y})dA}\\
+\mi{\iint_{D_1} (\derivada{Q}{x}-\derivada{P}{y})dA +\iint_{D_2}(\derivada{Q}{x}-\derivada{P}{y})dA}\\
+\mi{= \oint_{C_1} Pdx+Qdy + \oint_{C_2}Pdx+Qdy}\\
+\mi{= \oint_{C} Pdx+Qdy}
+}
+
+\ej{
+\mi{\oint_c \frac{1}{3}y^3 dx+(xy+xy^2)dy}\\
+\intertext{c: es la frontera de la región en el primer cuadrante de $y=0,x=y^2,x=1-y^2$}
+\mi{P=\frac{1}{3}y^3}& P_y=y^2\\
+\mi{Q=xy+xy^2}& Q_x=y+y^2\\
+\mi{\iint_D[(y+y^2)-y^2]dA= \ied{0}{\frac{1}{\sqrt{2}}}{y^2}{1-y^2}(y)dxdy}\\
+\mi{\int_0^{1/\sqrt{2}}xy]_{y^2}^{1-y^2}=\ie{0}{1/\sqrt{2}}{(y-2y^3)}{y}=\frac{y^2}{2}-\frac{y^4}{2}]_{0}^{1/\sqrt{2}}=\frac{1}{8}}
+}
+
+\ej{
+\mi{\oint_c e^{x^2}dx+2\tan^{-1} x dy}\\
+\intertext{triángulo con vértices (0,0),(0,1),(-1,1)}
+\mi{P=e^{x^2}}& Q=2\tan^{-1}x\\
+\mi{P_y=0}& Q_x =\frac{2}{1+x^2}\\
+\mi{\oint_c e^{x^2}dx+2\tan^{-1}xdy=\iint_D \frac{2}{1+x^2}dA}\\
+\mi{\ied{-1}{0}{-x}{1}\frac{2}{1+x^2}dydx}\\
+\mi{\int_{-1}^0 \frac{2y}{1+x^2}]_{-x}^1 dx=\ie{-1}{0}{(\frac{2}{1+x^2}+\frac{2x}{1+x^2})}{x}}\\
+\mi{[2\tan^{-1}x+ln(1+x^2)]_{-1}^0 = \frac{\pi}{2}-ln(2)=0.87}
+}
